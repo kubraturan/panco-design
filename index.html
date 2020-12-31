@@ -1,0 +1,77 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Kiz Bebek GİYİM Modelleri ve Fiyatları - Panço</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+        <script type="text/javascript" src="../data.js"></script>
+        <script type="text/javascript" src="../main.js"></script>
+    </head>
+    <body>
+        <!-- Header  -->
+        <div class="page-header">
+            <div class="container">
+                <div class="header-left">
+                    <i class="fas fa-bars" style="font-size:25px; margin-right: 15px; color: #650e6d"></i>
+                    <a href="/" class="logo">
+                        <img src="https://cdn-panco.akinon.net/static_omnishop/pnc86/assets/img/logo%40panco-babykids.png" alt=""> 
+                    </a>
+                </div>
+                <div class="icon-container">
+                    <i class="fas fa-user" style="font-size:22px; margin-right: 15px;"></i>
+                    <i class="fas fa-search" style="font-size:22px; margin-right: 15px;"></i>
+                    <i class="fas fa-shopping-bag" style="font-size:22px;"></i>
+                </div>
+            </div>
+            <div class="populer-search">
+                <span>
+                    Popüler Aramalar
+                </span>
+                <div class="populer-search-items">
+                    <ul id ="populer-search-items-list">
+                        <script>
+                            window.onload = getPopular(popularData);
+                        </script>
+                    </ul>
+                </div>
+            </div>
+            <div class="header-banner">
+                200 TL ve üzeri kargo bedava
+            </div>
+        </div>
+        <!-- Kategoriler filtreler  -->
+        <div class="filter-container-box">
+            <div class="filter-box">
+                <i class="fas fa-angle-right" style="font-size:22px; margin-right: 15px;"></i>
+                <span>Kategoriler</span>
+            </div>
+            <div class="filter-box">
+                <i class="fas fa-angle-right" style="font-size:22px; margin-right: 15px;"></i>
+                <span>Filtreler</span>
+            </div>
+            <div class="selected-page">
+                Ana sayfa: Kız Bebek : <strong style="color: #002c8acc;">GİYİM</strong>
+            </div>
+        </div>
+        <!-- Slider  -->
+        <div class="slider-container-box">
+            <div class="slider-box">
+                <div id = "slider" class="slider"></div>
+            </div>
+            <div class="nav">
+                <div class="arrow right material-icons"><span>keyboard_arrow_right</span></div>
+                <div class="arrow left material-icons"><span>keyboard_arrow_left</span></div>
+            </div>
+            <script>
+                window.onload = showSlider(contentData, sliderData)
+            </script>
+        </div>
+        <!--Ürün içerikleri  -->
+        <div id = "grid-container" class="grid-container"></div>
+    </body>
+    <script>
+        //Sayfa yüklendiği zaman ilk olarak atlet içeriğinin yüklenmesi için 
+        window.load = contentData.Athlete.forEach(addProductCard);
+    </script>
+</html>
